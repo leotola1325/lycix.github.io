@@ -1,0 +1,330 @@
+/* Definições gerais para altura e margens da página */
+body, html {
+    height: 100%;
+    margin: 0;
+    overflow: hidden; /* Remove a barra de rolagem */
+}
+
+/* Definição de uma imagem de fundo que cobre toda a tela */
+@keyframes moverFundo {
+    0% {
+        background-position: 0 0; /* Posição inicial do fundo */
+    }   
+    100% {
+        background-position: -2000px 0; /* Ajuste a distância conforme o tamanho da imagem */
+    }
+}
+
+/* Modificamos o estilo da imagem de fundo para adicionar a animação */
+.bg-image {
+    background-image: url('C:/Users/Leoya/OneDrive/Área de Trabalho/web/jogo/imagens/paisagem.png');
+    height: 100%;
+    width: 100%;    
+    background-position: 0 0; /* Ponto inicial da imagem */
+    background-repeat: repeat-x; /* Faz a imagem repetir horizontalmente */
+    background-size: cover; /* Mantém a imagem cobrindo toda a tela */
+    position: relative;
+    animation: moverFundo 10s linear infinite; /* Animação de movimento contínuo */
+}
+@font-face {
+    font-family: 'CoelinhoAventureiro'; /* Nome da sua fonte */
+    src: url('chasis_7/Chasis-7.ttf') format('truetype'); /* Caminho para a fonte */
+}
+
+/* Estilização do título centralizado na tela */
+.titulo {
+    position: absolute;
+    top: 20px; /* Distância do topo */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Centraliza o título */
+    color: rgb(0, 0, 0);
+    font-family: 'CoelinhoAventureiro', sans-serif; /* Fonte personalizada */
+    font-size: 75px;
+    text-align: center;
+}
+
+
+/* Estilo do botão, centralizado e com bordas arredondadas */
+.botao {
+    position: absolute;
+    top: 200px; /* Posição a partir do topo */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Centraliza o botão */
+    padding: 10px 20px;
+    font-size: 24px;
+    cursor: pointer;
+    border: none; /* Remove borda padrão */
+    background-color: #4CAF50; /* Cor de fundo */
+    color: white;
+    border-radius: 5px; /* Arredonda as bordas */
+}
+
+/* Definições de posicionamento e tamanho do personagem */
+#personagem {
+    position: absolute;
+    width: 375px; /* Largura do personagem */
+    left: 50px; /* Distância da borda esquerda */
+    bottom: 170px; /* Distância do fundo da tela */
+}
+
+/* Estilo e animação do obstáculo principal */
+#obstaculo {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: url('C:/Users/Leoya/OneDrive/Área de Trabalho/web/jogo/imagens/arbustro.png.png') no-repeat center center; /* Imagem do obstáculo */
+    background-size: contain; /* Ajusta a imagem ao tamanho do obstáculo */
+    right: -1500px; /* Posiciona o obstáculo fora da tela à direita */
+    bottom: 153px;
+    animation: obstaculo-animation 4s linear infinite; /* Animação contínua para movimentar o obstáculo */
+}
+
+/* Estilo e animação do obstáculo de neve */
+#obstaculoneve {
+    position: absolute;
+    width: 250px;
+    height: 150px;
+    background: url('C:/Users/Leoya/OneDrive/Área de Trabalho/web/jogo/imagens/cachorrodireita-ezgif.com-rotate.gif') no-repeat center center;
+    background-size: contain;
+    right: -100px; /* Inicia fora da tela */
+    bottom: 125px;
+    animation: obstaculo-neve-animation 4s linear infinite; /* Animação contínua e mais lenta do obstáculo de neve */
+}
+
+/* Animação para o obstáculo principal, que se move da direita para a esquerda */
+@keyframes obstaculo-animation {
+    from {
+        right: -400px; /* Inicia fora da tela */
+    }
+    to {
+        right: calc(100% + 100px); /* Move para fora da tela à esquerda */
+    }
+}
+
+/* Animação para o obstáculo de neve, similar ao obstáculo principal */
+@keyframes obstaculo-neve-animation {
+    from {
+        right: -100px;
+    }
+    to {
+        right: calc(100% + 900px);
+    }
+}
+@font-face {
+    font-family: 'Inicio'; /* Nome da sua fonte */
+    src: url('chasis_7/Chasis-7.ttf') format('truetype'); /* Caminho para a fonte */
+}
+
+/* Estilização da pontuação exibida na tela */
+#pontuacao {
+    position: absolute;
+    top: 54px;
+    right: 35px; /* Move para o lado direito */
+    color: white;
+    font-size: 35px;
+    font-family: 'Inicio', sans-serif; /* Fonte personalizada */
+}
+@font-face {
+    font-family: 'GameOver'; /* Nome da sua fonte */
+    src: url('chasis_7/Chasis-7.ttf') format('truetype'); /* Caminho para a fonte */
+}
+.pontuacao-game-over {
+    position: absolute;
+    top: 10%;
+    left: 63%;
+    transform: translate(-50%, -50%); /* Centraliza a pontuação */
+    font-size: 80px;
+    color: white;
+    font-family: 'GameOver', sans-serif; /* Fonte personalizada */
+}
+
+
+/* Estilização das imagens adicionais (nuvens, pássaros) com animação */
+.imagem-extra {
+    position: absolute;
+    right: -300; /* Começa na lateral direita */
+    animation: moverInfinito linear infinite; /* Animação contínua de movimento */
+}
+
+/* Estilo da primeira nuvem */
+#nuvem1 {
+    width: 170px;
+    height: 170px;
+    background: url('C:/Users/Leoya/OneDrive/Área de Trabalho/web/jogo/imagens/1nuvem-removebg-preview.png') no-repeat center center;
+    background-size: contain;
+    bottom: 420px;
+    animation-duration: 20s;
+}
+
+/* Estilo da segunda nuvem */
+#nuvem2 {
+    width: 170px;
+    height: 165px;
+    background: url('C:/Users/Leoya/OneDrive/Área de Trabalho/web/jogo/imagens/1nuvem-removebg-preview.png') no-repeat center center;
+    background-size: contain;
+    bottom: 440px;
+    animation-duration: 33s; /* Animação mais lenta que a primeira nuvem */
+
+}
+
+#nuvem3 {
+    width: 160px;
+    height: 150px;
+    background: url('C:/Users/Leoya/OneDrive/Área de Trabalho/web/jogo/imagens/1nuvem-removebg-preview.png') no-repeat center center;
+    background-size: contain;
+    bottom: 500px;
+    animation-duration: 28s; /* Animação mais lenta que a primeira nuvem */
+
+}
+/* Estilo dos pássaros */
+#passaros {
+    width: 200px;
+    height: 100px;
+    background: url('C:/Users/Leoya/OneDrive/Área de Trabalho/web/jogo/imagens/bandodepassaros.png') no-repeat center center;
+    background-size: contain;
+    bottom: 390px;
+    animation-duration: 15s; /* Animação mais rápida */
+}
+
+/* Animação contínua de movimento da direita para a esquerda */
+@keyframes moverInfinito {
+    0% {
+        right: -380px; /* Inicia fora da tela à direita */
+    }
+    100% {
+        right: 100%; /* Move para fora da tela à esquerda */
+    }
+}
+@font-face {
+    font-family: 'fim'; /* Nome da sua fonte */
+    src: url('chasis_7/Chasis-7.ttf') format('truetype'); /* Caminho para a fonte */
+}
+
+#moeda{
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    background: url('C:/Users/Leoya/OneDrive/Área de Trabalho/web/jogo/imagens/moeda.png.png') no-repeat center center; /* Imagem do obstáculo */
+        background-size: contain; /* Ajusta a imagem ao tamanho do obstáculo */
+    right: -1500px; /* Posiciona o obstáculo fora da tela à direita */
+    bottom: 310px;
+    animation: obstaculo-animation 4s linear infinite; /* Animação contínua para movimentar o obstáculo */
+}
+@keyframes moeda-animation {
+    0% {
+        right: -1500px; /* Fora da tela à direita */
+    }
+    100% {
+        right: 100%; /* Move até a borda direita da tela */
+    }
+}
+@font-face {
+    font-family: 'Moeda'; /* Nome da sua fonte */
+    src: url('chasis_7/Chasis-7.ttf') format('truetype'); /* Caminho para a fonte */
+}
+#money {
+    position: absolute;
+    top:108px;
+    left: 1210px;
+    transform: translate(-50%, -50%); /* Centraliza a pontuação */
+    font-size: 33px;
+    color: white;
+    font-family: 'Moeda', sans-serif; /* Fonte personalizada */
+}
+
+
+
+#moedaxp{
+    position: absolute;
+    top:80px;
+    width: 60px;
+    height: 60px;
+    left: 1280px;
+    background: url('C:/Users/Leoya/OneDrive/Área de Trabalho/web/jogo/imagens/moeda.png.png') no-repeat center center; /* Imagem do obstáculo */
+    background-size: contain; /* Ajusta a imagem ao tamanho do obstáculo */
+    bottom: 310px;
+    }
+
+
+/* Estilo da mensagem de Game Over */
+.game-over {
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza a mensagem */
+    color: rgb(0, 0, 0);
+    font-size: 90px;
+    text-align: center;
+    font-family: 'fim', sans-serif; /* Fonte personalizada */
+}
+#lojaButton {
+    position: absolute;
+    top: 200px;
+    left: 800px;
+    font-size: 24px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px; /* Arredonda as bordas */
+    border: none;
+    cursor: pointer;
+}
+
+#loja {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 50%;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 20;
+    padding: 20px;
+    text-align: center;
+}
+
+.dezpor{
+    position: relative;
+    top: 60px;
+    width: 250px;
+    margin: 10px;
+    left: -230px;
+
+}
+
+.vintepor{
+    position: relative;
+    top: -70px;
+    width: 230px;
+    margin: 10px;
+    left: 170px;
+}
+
+
+#fechar-loja {
+    top: 10px;
+    padding: 10px 20px;
+    left: 110px;
+    font-size: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px; /* Arredonda as bordas */
+}
+
+@font-face {
+    font-family: 'DescontosImperdíveis'; /* Nome da sua fonte */
+    src: url('Merolkins.otf') format('truetype'); /* Caminho para a fonte */
+}
+
+.sub {
+    position: relative;
+    font-size: 45px;
+    margin-bottom: 20px;
+    top: -40px;
+    font-family: 'DescontosImperdíveis', sans-serif; /* Fonte personalizada */
+    left: 243px;
+}

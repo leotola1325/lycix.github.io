@@ -1,0 +1,568 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.linha {
+    height: 40px;
+    background-color: purple;
+    margin: 20px 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.linha h2 {
+    color: #fff9f9;
+    margin: 0;
+    font-size: 1.8em;
+}
+
+.search-bar {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar input[type="text"] {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 20px;
+    font-size: 1em;
+}
+
+.search-bar button {
+    background-color: #5c065f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-left: 10px;
+
+/* Centralização */
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+} 
+
+
+/* Contêiner para os ícones */
+.search-bar svg {
+    margin-left: 40px; /* Aumenta o espaçamento entre os ícones */
+    cursor: pointer; /* Adiciona o cursor de clique nos ícones */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background: white;
+    display: flex;
+    align-items: center;
+}
+
+.image {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+}
+
+.image img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 8px;
+    display: inline-block;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.entrega button {
+    background-color: #5c065f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-left: 10px;
+}
+
+.description {
+    flex: 2;
+    text-align: left;
+    padding: 20px;
+}
+
+.description h2 {
+    color: #5c065f;
+    margin-bottom: 10px;
+    font-size: 1.6em;
+    text-align: left;
+    letter-spacing: 0.5px;
+}
+
+.description .highlight {
+    color: #5c065f;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.description .price {
+    font-size: 1.6em;
+    color: #000000;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.description p {
+    margin: 10px 0;
+    line-height: 1.8;
+}
+
+.description button {
+    background-color: #5c065f;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 10px;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2);
+}
+
+.description button:hover {
+    background-color: #5c065f;
+    transform: translateY(-2px);
+}
+
+.quantidade {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.campo-quantidade {
+    width: 50px;
+    text-align: center;
+    margin: 0 10px;
+}
+
+.sizes {
+    margin: 20px 0;
+}
+
+.sizes label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    letter-spacing: 0.5px;
+}
+
+.sizes .size-button {
+    background-color: #e0e0e0;
+    color: #333;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    display: inline-block;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sizes .size-button:hover {
+    background-color: #bdbdbd;
+}
+
+.sizes .size-button.selected {
+    background-color: #5c065f;
+    color: white;
+}
+
+.payment {
+    margin-top: 20px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.payment h2 {
+    color: #5c065f;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+.payment-methods img {
+    margin: 10px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    padding: 0px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.entrega {
+    margin-top: 40px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.entrega h2 {
+    color: #5c065f;
+}
+
+.highlight-rapida {
+    color: red;
+    font-weight: bold;
+}
+
+/* Estilo geral para os comentários */
+.comments {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.comments h2 {
+    color: #5c065f;
+    margin-bottom: 15px;
+}
+
+/* Estilo para cada comentário */
+.comment {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-left: 4px solid #5c065f;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.comment h4 {
+    color: #5c065f;
+    margin-bottom: 5px;
+}
+
+/* Estilo para a área de avaliação e estrelas */
+.comment-box {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.star-rating {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+}
+
+/* Estilo para as estrelas de avaliação */
+.star-rating {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+}
+
+/* Estilos das estrelas */
+.star-rating input[type="radio"] {
+    display: none;
+}
+
+.star-rating label {
+    font-size: 1.5em;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.star-rating input[type="radio"]:checked ~ label {
+    color: gold;
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+    color: gold;
+}
+
+
+/* Área de comentário */
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1em;
+    margin-bottom: 15px;
+    resize: vertical;
+    transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+    border-color: #5c065f;
+    outline: none;
+}
+
+/* Estilo para o botão de postagem */
+button {
+    background-color: #5c065f;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #7a0a74;
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .input-nome, .star-rating, textarea, button {
+        width: 100%;
+    }
+
+    .star-rating {
+        flex-direction: column;
+    }
+}
+
+/* Footer Estrutura */
+.footer {
+    background-color:  purple;
+    color: #fff;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.footer-col {
+    flex: 1;
+}
+
+.footer-logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 15px;
+}
+/* Contêiner principal */
+.footer-col.logo-container {
+    text-align: left; /* Mantém o texto alinhado à esquerda */
+}
+
+/* Linha com a logo e o título */
+.logo-row {
+    display: flex; /* Posiciona a logo e o texto lado a lado */
+    align-items: center; /* Centraliza verticalmente */
+    gap: 10px; /* Espaçamento entre a logo e o título */
+    margin-bottom: 10px; /* Espaçamento entre a linha e o parágrafo */
+}
+
+/* Estilo da logo */
+.footer-logo {
+    width: 65px; /* Tamanho da logo */
+    height: auto; /* Mantém as proporções */
+}
+
+/* Estilo do título */
+.logo-title {
+    font-size: 18px; /* Tamanho do título */
+    font-weight: bold;
+    margin: 0; /* Remove margens padrão */
+}
+
+/* Texto abaixo */
+.footer-col p {
+    margin: 0; /* Remove margens padrão */
+    font-size: 14px;
+    color: #fff; /* Cor discreta */
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: #00aaff;
+}
+
+/* Redes Sociais */
+.social-links a {
+    display: inline-block;
+    color: #ccc;
+    font-size: 20px;
+    margin-right: 15px;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.social-links a:hover {
+    transform: scale(1.2);
+    color: #00aaff;
+}
+
+/* Rodapé Inferior */
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    border-top: 1px solid #333;
+    padding-top: 15px;
+    color: #ccc;
+}
+.social-links .social-image{
+    width: 60px; /* Ajuste o tamanho conforme necessário */
+    height: 50px;
+    margin: 5px;
+    align-self: start 3/2;
+    object-fit: contain;
+} 
+
+
+.coupon body{
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+background-color: #f9f9f9;
+}
+
+.main-container {
+width: 100%;
+max-width: 600px;
+padding: 20px;
+background: #fff;
+border-radius: 8px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+display: flex;
+flex-direction: column;
+gap: 20px;
+border: 2px solid #ccc;
+}
+
+
+.delivery-description,
+.payment-methods {
+    text-align: center;
+    font-size: 1rem;
+    color: #333;
+}
+
+.coupon-container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    background: none; /* Removido o fundo para integrar ao contêiner principal */
+}
+
+.coupon-container h2 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.coupon-form {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.coupon-form input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    max-width: 300px;
+}
+
+.coupon-form button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: purple;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.coupon-form button:hover {
+    background-color: #218838;
+}
+
+.message {
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+.message.success {
+    color: #28a745;
+}
+
+.message.error {
+    color: #dc3545;
+}
+
+.payment-methods ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.payment-methods li {
+    margin: 5px 0;
+}

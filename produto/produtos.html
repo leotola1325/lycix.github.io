@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venda de Produtos</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<div class="linha">
+    <h2>Lycix</h2>
+</div>
+
+<!-- Aba de pesquisa -->
+<div class="search-bar">
+  <input type="text" placeholder="Buscar produto...">
+  <button>Buscar</button>
+  
+  <!-- Botão de Carrinho -->
+   <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-cart3" viewBox="0 0 20 20">
+    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+  </svg>
+
+  <!-- Botão de Conta -->
+  <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 20 20">
+    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+  </svg>
+  </a>
+</div>
+
+
+<div class="container">
+    <div class="image">
+        <img src="https://res.cloudinary.com/dp9dnliwc/image/upload/c_pad,h_900,w_900/f_auto/q_auto/wmmedia/watch_images/large/59071921_1572994134.jpg" alt="Pulseira Pandora Elegante em Prata">
+    </div>
+    <div class="description">
+        <h2 style="text-align: left;">Bracelete Pandora Com Fecho De Coração</h2>
+        <p>Bracelete elegante e essencial para qualquer coleção de joias.</p>
+        <h2 style="text-align: left;">Descrição</h2>
+        <p class="price">R$ 219,90</p>
+        <p>Descubra o charme atemporal com o bracelete Pandora, uma peça essencial para qualquer coleção de joias. Feita em prata de lei de alta qualidade, este bracelete combina sofisticação e versatilidade, permitindo que você personalize com seus charms favoritos para criar um estilo único e pessoal.</p>
+
+        <div class="sizes">
+            <label for="size-select">Escolha o tamanho:</label>
+            <button class="size-button" data-size="17">17 cm</button>
+            <button class="size-button" data-size="18">18 cm</button>
+            <button class="size-button" data-size="19">19 cm</button>
+            <button class="size-button" data-size="20">20 cm</button>
+            <button class="size-button" data-size="21">21 cm</button>
+            <button class="size-button" data-size="22">22 cm</button>
+            <button class="size-button" data-size="23">23 cm</button>
+        </div>
+
+        <div class="quantidade">
+            <button class="botao" onclick="alterarQuantidade(-1)">-</button>
+            <input type="number" id="quantidade" class="campo-quantidade" value="1" min="1" max="20" readonly>
+            <button class="botao" onclick="alterarQuantidade(1)">+</button>
+            <button class="description button" onclick="comprar()">Comprar Agora</button>
+            <button class="description button" onclick="adicionarCarrinho()">Adicionar ao Carrinho</button>
+        </div>
+    </div>
+</div>
+
+<div class="entrega">
+    <h2>Descrição da Entrega</h2>
+    <p> A Lycix se destaca no mercado pela agilidade e eficiência na entrega de seus produtos, garantindo que os clientes recebam suas compras em até 72 horas. Este compromisso com a rapidez é um dos pilares do nosso serviço, proporcionando uma experiência de compra agradável e sem estresse.<br><br>
+        
+        Rapidez e Eficiência
+        Na Lycix, entendemos a importância de receber seus produtos rapidamente. Por isso, nossa logística é otimizada para garantir que todos os pedidos sejam processados e enviados com a maior brevidade possível. Assim que o pagamento é confirmado, nossa equipe entra em ação, preparando seu pedido para despacho imediato.<br><br>
+
+        Segurança e Rastreio
+        A segurança dos produtos durante o transporte é uma prioridade. Utilizamos embalagens adequadas que protegem os itens contra danos, garantindo que cheguem em perfeitas condições. Além disso, todos os nossos envios são acompanhados por um sistema de rastreamento. Assim, você pode monitorar o status da entrega em tempo real, proporcionando tranquilidade e previsibilidade.<br><br>
+        
+        </p>
+    <button>ENTREGA RAPIDA</button>
+</div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicar Cupom</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="coupon-container">
+        <h2>Aplicar Cupom</h2>
+        <form class="coupon-form" id="couponForm">
+            <input type="text" id="couponCode" placeholder="Insira o código do cupom">
+            <button type="submit">Aplicar</button>
+        </form>
+        <div class="message" id="message"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+<div class="payment">
+    <h2>Métodos de Pagamento</h2>
+    <div class="payment-methods">
+        <img src="C:/Users/Leoya/OneDrive/Área de Trabalho/web/produto/imagem/pix.png" alt="Pix" width="100" />
+        <img src="C:/Users/Leoya/OneDrive/Área de Trabalho/web/produto/imagem/Hipercard.png" alt="Hipercard" width="100" />
+        <img src="C:/Users/Leoya/OneDrive/Área de Trabalho/web/produto/imagem/master.png" alt="Mastercard" width="100" />
+        <img src="C:/Users/Leoya/OneDrive/Área de Trabalho/web/produto/imagem/america.png" alt="American Express" width="100" />
+        <img src="C:/Users/Leoya/OneDrive/Área de Trabalho/web/produto/imagem/visa.png" alt="visa" width="100" />
+    <p>Aceitamos cartões de crédito</p>
+</div>
+
+<div class="comments">
+    <h2>Avaliações</h2>
+
+    <!-- Comentários existentes -->
+<div class="comment">
+    <h4>João Silva</h4>
+    <p>Avaliação: ★★★★★</p>
+    <p>Excelente produto, entrega super rápida! Recomendo.</p>
+</div>
+<div class="comment">
+    <h4>Ana Costa</h4>
+    <p>Avaliação: ★★★★☆</p>
+    <p>Produto de qualidade e ótimo atendimento. Chegou antes do prazo.</p>
+</div>
+
+<!-- Nova avaliação com estrelas -->
+<div class="comment-box">
+    <h4>Deixe sua Avaliação</h4>
+
+    <div class="star-rating">
+        <input type="radio" id="estrela1" name="rating" value="1">
+        <label for="estrela1">★</label>
+        <input type="radio" id="estrela2" name="rating" value="2">
+        <label for="estrela2">★</label>
+        <input type="radio" id="estrela3" name="rating" value="3">
+        <label for="estrela3">★</label>
+        <input type="radio" id="estrela4" name="rating" value="4">
+        <label for="estrela4">★</label>
+        <input type="radio" id="estrela5" name="rating" value="5">
+        <label for="estrela5">★</label>
+    </div>
+    <textarea id="comentario" rows="4" placeholder="Escreva sua avaliação..."></textarea>
+    <button onclick="postarAvaliacao()">Postar Avaliação</button>
+</div>
+
+<script src="script.js"></script>
+
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redes Sociais</title>
+  <!-- Link para o arquivo CSS -->
+  <link rel="stylesheet" href=" Style.css">
+</head>
+</body>
+</html>
+
+<footer class="footer">
+  <div class="footer-wrapper">
+      <!-- Logo -->
+<div class="footer-col logo-container">
+    <div class="logo-row">
+        <img src="C:/Users/Leoya/OneDrive/Área de Trabalho/web/produto/logo.png" alt="Logo da empresa" class="footer-logo">
+        <h4 class="logo-title">lycix_Beauty</h4>
+    </div>
+    <p>Conectando você com o melhor conteúdo.</p>
+</div>
+
+      <!-- Links Rápidos -->
+      <div class="footer-col">
+          <h4>Links Rápidos</h4>
+          <ul>
+              <li><a href="#">Sobre Nós</a></li>
+              <li><a href="#">Serviços</a></li>
+              <li><a href="#">Contato</a></li>
+              <li><a href="#">Política de Privacidade</a></li>
+          </ul>
+      </div>
+
+      <!-- Contato -->
+      <div class="footer-col">
+          <h4>Contato</h4>
+          <p>Email: lycixfeminin@gmail.com</p>
+          <p>Telefone: +00 00000-0000</p>
+      </div>
+
+     <!-- Redes Sociais -->
+<div class="footer-col social-links">
+    <h4>Siga-nos</h4>
+    <a href="https://facebook.com" target="_blank" class="social-link">
+        <img src="C:/Users/Leoya/OneDrive/Área de Trabalho/web/produto/face.png" alt="Facebook" class="social-image">
+    </a>
+    <a href="https://tiktok.com" target="_blank" class="tiktok">
+        <img src="C:/Users/Leoya/OneDrive/Área de Trabalho/web/produto/tiktok.png" alt="TikTok" class="social-image" width="400" height="100">
+    </a>
+    <a href="https://www.instagram.com/lycix_beauty" target="_blank" class="social-link">
+        <img src="C:/Users/Leoya/OneDrive/Área de Trabalho/web/produto/insta.png" alt="Instagram" class="social-image">
+    </a>
+</div>
+  </div>
+  <div class="footer-bottom">
+      <p>&copy;2024 lycix_Beauty. Todos os direitos reservados. | <a href="#">Política de Privacidade</a></p>.</p>
+  </div>
+</footer>

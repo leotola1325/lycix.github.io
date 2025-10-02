@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-image: url('C:/Users/Leoya/OneDrive/Área de Trabalho/web/login/imagem/fundo.jpg');
+    background-size: cover; /* Ajusta a imagem para cobrir o fundo */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Impede a repetição da imagem */
+}
+
+.login-container {
+    width: 300px;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.541); /* Fundo branco com leve transparência */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #4b0082; /* Título em tom de lilás escuro */
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #4b0082; /* Cor lilás mais escura */
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.input-container i {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #4b0082; /* Cor do ícone em lilás */
+}
+
+.input-container input {
+    width: 100%;
+    padding: 8px 8px 8px 30px; /* Espaço para o ícone */
+    color: rgb(255, 255, 255);
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    top: 100px;
+    padding:9px;
+    background-color: #4b0082; /* Lilás suave para o botão */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4b0082; /* Tom lilás mais intenso ao passar o mouse */
+}
+
+#error-message {
+    color: pink;
+    margin-top: 10px;
+}
+
